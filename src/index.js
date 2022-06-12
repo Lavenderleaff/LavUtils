@@ -3,7 +3,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 client.commands = new Collection();
 
-const fs = reqire('fs');
+const fs = require('fs');
 
 require('dotenv').config();
 
@@ -15,6 +15,7 @@ const commandFolders = fs.readdirSync("./src/commands");
     for (file of functions) {
         require(`./functions/${file}`)(client);
     }
-    
+    client.handleEvents(eventFiles, "./src/events");
+    client.handleCommands(commandFolders, "./src/commands");
     client.login(process.env.TOKEN);
 })();
