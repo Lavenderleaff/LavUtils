@@ -1,4 +1,7 @@
 .env
 node_modules/
 deploy-commands.js
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3b38bbedf67393786d93c518ab3b8f594d5e0839
