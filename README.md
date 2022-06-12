@@ -5,3 +5,5 @@ This started as a little project to work on with a friend, and we decided to mak
 
 # And finally...   
 Have fun with it! It's open-source, so you are to as you please (without marketing it as your idea.)
+
+## Thank you Dralos-
