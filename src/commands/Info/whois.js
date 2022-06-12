@@ -21,7 +21,7 @@ const {
         const user = interaction.options.getUser('user');
         
         const embed = new MessageEmbed()
-        .setTitle(`${user.username}'s userinfo`)
+        .setTitle(`${user.username}'s Information`)
         .setColor(0x00AE86)
         .setThumbnail(user.displayAvatarURL())
         .addField('Username', `${user.username}#${user.discriminator}`, true)

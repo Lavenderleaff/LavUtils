@@ -8,7 +8,12 @@ module.exports = {
         if (!command) return;
 
         try {
-            await command.execute(interaction);
+
+            if (command.permissions && command.permissions.length > 0) {
+                if (!interaction.member.permissions.has(command.permissions)) return await interaction.reply({ content: `You do not have permission to use this command.`});
+            }
+
+            await command.execute(interaction, client);
         } catch (error) {
             console.error(error);
             await interaction.reply({
