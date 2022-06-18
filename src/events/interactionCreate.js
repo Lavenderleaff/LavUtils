@@ -1,3 +1,5 @@
+const { isMessageComponentInteraction } = require("discord-api-types/utils/v10");
+
 module.exports = {
     name: 'interactionCreate',
     async execute(interaction, client) {
